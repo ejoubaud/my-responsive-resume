@@ -1,0 +1,123 @@
+// Author section of HTML5 Boilerplate's main.css
+
+@import "base";
+
+body {
+    padding: 10px;
+    font: 1em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    color: #515047;
+    background-color: #F2F1DB;
+}
+h1 { font-size: 3em; }
+h2, h3 { font-size: 2em; }
+h1 {
+    color: #515047;
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    text-align: right;
+    margin: 0.5em 0;
+}
+h2 {
+    color: #d4d3c0;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    text-align: right;
+    margin: 0.5em 0;
+}
+h3 {
+    color: $remarkable-text-color;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    margin: 0 0 0.5em 0;
+}
+h4 {
+    margin: 0;
+}
+a {
+    color: $remarkable-text-color;
+    text-decoration: none;
+    font-weight: 550;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited, a:active {
+    color: $remarked-text-color;
+}
+p {
+    // font-size: 1.25em; 
+    line-height: 1.15;
+    margin: 0.75em 0;
+    color: $text-color;
+}
+small {
+    font-size: 1em; 
+    color: $remarkable-text-color;
+}
+ul {
+    margin-top: 0.5em;
+}
+
+.point {
+    margin: 1.5em 0;
+}
+.point-date {
+    color: $aux-text-color;
+}
+.label {
+    color: $aux-text-color;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+section {
+    @include box-shadow(inset 0 -1.5em 1.5em -1em $bg-color);
+    @include transition(all .2s ease);
+}
+
+.maximized {
+    @include border-radius(1em);
+}
+section:hover {
+    @include border-radius(0.5em);
+}
+
+.maximized, section:hover {
+    background-color: $hilight-bg-color;
+    @include box-shadow($shadow-color 0 0 0.4em 0.5em);
+
+    p {
+        color: $hilight-text-color;
+    }
+
+    .point-date {
+        color: $hilight-aux-text-color;
+    }
+
+    .point {
+        /* On hover/maximization, sections get a background that hides points if z-index is not increased.
+           The rest of the time, it is decreased to be hidden by inset box-shadow for a faded-bottom FX */
+        z-index: 2;
+    }
+}
+
+.nav-bar ul {
+    padding: 1em;
+
+    li {
+        border-left: 2px solid $hilight-bg-color;
+        padding: 0.5em;
+
+        a {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+    li:hover, li:active {
+        border-left: 2px solid $remarkable-text-color;
+    }
+}
+
+
+
+
