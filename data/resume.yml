@@ -1,200 +1,203 @@
-training:
-  title: Training
-  points:
-    - title: "Master's degree in Computer Sciences applied to Enterprise Management"
-      date: 2003-2010
-      text: |
-        Followed the whole course and graduated at the University of Nantes, France.
-        
-        French title is "Master MIAGE" for "Méthodes Informatiques Appliquées à la Gestion d'Entreprise"
+title: "Emmanuel Joubaud"
+subtitle: "Ruby, PHP and Java Web developer"
+sections:
+  training:
+    title: "Training"
+    points:
+      - title: "Master's degree in Computer Sciences applied to Enterprise Management"
+        date: 2003-2010
+        text: |
+          Followed the whole course and graduated at the University of Nantes, France.
+          
+          French title is "Master MIAGE" for "Méthodes Informatiques Appliquées à la Gestion d'Entreprise"
 
-experience:
-  title: Experience
-  points:
-    - title: "Tech lead on a Web integration project"
-      date: July-November 2012
-      data:
-        Employer: |
-          "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
-        Client: Hauts-de-Seine local government
-      text: |
-         * Responsible of delivery for the outsourcing of the Hauts-De-Seine territory's websites (6 websites)
-         * Web integration with the Typo3 CMS and the Symfony framework
-         * In charge of industrialization for the Internet domain
-         * Trained teams on Symfony and Typo3
-    -  title: "Team lead on a J2EE planning application outsourcing"
-       date: February-June 2012
-       data:
-         Employer: |
-          "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
-         Client: |
-          "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
-       text: |
-          * Supervision of developments, quality and planning for a 4-persons team
-          * Development of upgrades on a Struts2/Hibernate app
-          * Critical software for a big client. Handled all training planning for a major professional training organism
-          * Built a trust relationship in a difficult context
+  experience:
+    title: "Experience"
+    points:
+      - title: "Tech lead on a Web integration project"
+        date: "July-November 2012"
+        data:
+          Employer: |
+            "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
+          Client: Hauts-de-Seine local government
+        text: |
+           * Responsible of delivery for the outsourcing of the Hauts-De-Seine territory's websites (6 websites)
+           * Web integration with the Typo3 CMS and the Symfony framework
+           * In charge of industrialization for the Internet domain
+           * Trained teams on Symfony and Typo3
+      -  title: "Team lead on a J2EE planning application outsourcing"
+         date: February-June 2012
+         data:
+           Employer: |
+            "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
+           Client: |
+            "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
+         text: |
+            * Supervision of developments, quality and planning for a 4-persons team
+            * Development of upgrades on a Struts2/Hibernate app
+            * Critical software for a big client. Handled all training planning for a major professional training organism
+            * Built a trust relationship in a difficult context
 
-    - title: "Reverse-engineering and upgrades on a data-extraction project"
-      date: October 2011 - January 2012
-      data:
-        Employer: |
-          "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
-        Client: |
-          "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
-      text: |
-         * Edition of bills for a huge part of our client's business (60M€ yearly turnover)
-         * Reverse-engineering on a data-extraction application
-         * One-man project. Direct contact with the client. Built a solid trust relationship
-         * Very short deadlines, always honored
+      - title: "Reverse-engineering and upgrades on a data-extraction project"
+        date: "October 2011 - January 2012"
+        data:
+          Employer: |
+            "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
+          Client: |
+            "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
+        text: |
+           * Edition of bills for a huge part of our client's business (60M€ yearly turnover)
+           * Reverse-engineering on a data-extraction application
+           * One-man project. Direct contact with the client. Built a solid trust relationship
+           * Very short deadlines, always honored
 
-    - title: "Developer, then team lead, on a Talend ETL project"
-      date: March-October 2011
-      data:
-        Employer: |
-          "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
-        Client: |
-          "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
-      text: |
-         * Business analysis and development using Talend Open Studio
-         * Integration of data from an eco-system of 10 apps into one central DB
-         * Ended up supervising developments, quality and schedules of a delivery
+      - title: "Developer, then team lead, on a Talend ETL project"
+        date: "March-October 2011"
+        data:
+          Employer: |
+            "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
+          Client: |
+            "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
+        text: |
+           * Business analysis and development using Talend Open Studio
+           * Integration of data from an eco-system of 10 apps into one central DB
+           * Ended up supervising developments, quality and schedules of a delivery
 
-    - title: "Developer, tester and analyst on a J2EE project"
-      date: March 2010 - February 2011
-      data:
-        Employer: |
-          "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
-        Client: |
-          "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
-      text: |
-         * Development on 3 applications and their interfaces, using Struts, EJB2, JDBC, PL/SQL, Spring Batch
-         * Redaction and execution of tests using HP Quality Center
-         * Redaction of functional specifications
+      - title: "Developer, tester and analyst on a J2EE project"
+        date: "March 2010 - February 2011"
+        data:
+          Employer: |
+            "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
+          Client: |
+            "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
+        text: |
+           * Development on 3 applications and their interfaces, using Struts, EJB2, JDBC, PL/SQL, Spring Batch
+           * Redaction and execution of tests using HP Quality Center
+           * Redaction of functional specifications
 
-    - title: "Internship : Analysis and development of a Web app for HR interview reports"
-      date: April-August 2009
-      data:
-        Employer: |
-          "Proservia":http://www.proservia.fr/nous-conna%C3%AEtre
-        Client: None (internal project)
-      text: |
-         * Redaction of functional specifications
-         * Study to choose a technical framework
-         * Development using the Symfony framework
+      - title: "Internship : Analysis and development of a Web app for HR interview reports"
+        date: April-August 2009
+        data:
+          Employer: |
+            "Proservia":http://www.proservia.fr/nous-conna%C3%AEtre
+          Client: None (internal project)
+        text: |
+           * Redaction of functional specifications
+           * Study to choose a technical framework
+           * Development using the Symfony framework
 
-portfolio:
-  title: Portfolio
-  points:
-    - title: |
-        "Versions des Faits":https//github.com/ejoubaud/vdf
-      data:
-        Techno: "Ruby On Rails, CSS3, Travis CI"
-      text: |
-        A community-driven information and analysis website about TV and Internet documentaries. Checks the facts, reveals the opinions and presents critical or alternative points of view. French only for now.
-        
-        The work is still in progress, but the site is almost ready for its first release.
+  portfolio:
+    title: "Portfolio"
+    points:
+      - title: |
+          "Versions des Faits":https//github.com/ejoubaud/vdf
+        data:
+          Techno: "Ruby On Rails, CSS3, Travis CI"
+        text: |
+          A community-driven information and analysis website about TV and Internet documentaries. Checks the facts, reveals the opinions and presents critical or alternative points of view. French only for now.
+          
+          The work is still in progress, but the site is almost ready for its first release.
 
-    - title: |
-        "File Input Drop Zone":https://github.com/ejoubaud/file-input-drop-zone
-      data:
-        Techno: "jQuery, Coffeescript, HTML5"
-      text: |
-        A simple jQuery plugin that adds drag'n'drop support to a page area linked to a file input.
-
-
-principles:
-  title: Principles
-  points:
-    - title: As a project guy
-      data:
-        My reference: |
-          "Getting Real":http://gettingreal.37signals.com by "37 Signals":http://37signals.com/
-      text: |
-         * Be empirical
-         * Be agile
-         * Be focused
-
-    - title: As a team guy
-      data:
-        My reference: |
-          "Code Leaders And Beautiful Teams":http://www.infoq.com/presentations/Code-Leaders-Beautiful-Teams by "Roy Osherove":http://osherove.com/
-      text: |
-         * Care about people
-         * Help people grow
-         * Remove bottlenecks
-
-    - title: As a code guy
-      data:
-        My reference: |
-          "The Productive Programmer":http://shop.oreilly.com/product/9780596519544.do by "Neal Ford":http://nealford.com/
-      text: |
-         * DRY (Don't Repeat Yourself)
-         * Automatize
-         * Do shortcuts
+      - title: |
+          "File Input Drop Zone":https://github.com/ejoubaud/file-input-drop-zone
+        data:
+          Techno: "jQuery, Coffeescript, HTML5"
+        text: |
+          A simple jQuery plugin that adds drag'n'drop support to a page area linked to a file input.
 
 
-skills:
-  title: Skills
-  points:
-    - title: "Web development"
-      text: "HTML5, CSS3, Javascript, jQuery, JSON, Coffeescript, SASS, Compass, XML, XSL, XPath, Typo3, Wordpress"
-    - title: "Ruby"
-      text: "Ruby On Rails, FactoryGirl, UnitTest, RSpec, Haml, Middleman"
-    - title: "Java"
-      text: "Struts 1 & 2, Hibernate, Spring, EJB2, JDBC, Talend, JUnit, TestNG, JBoss, Weblogic, Jetty, JProfiler, Grails"
-    - title: "PHP"
-      text: "Symfony, Doctrine, PHPUnit, Typo3, PEAR"
-    - title: "Databases"
-      text: "MySQL, postgresql, Oracle DB and PL/SQL, SQLite, H2DB, HSQLDB"
-    - title: "Development tools"
-      text: "Eclipse, Sublime Text 2, Hudson/Jenkins, Travis CI, HP Quality Center, Github, Git, SVN, CVS"
-    - title: "Other tools"
-      text: "Photoshop, Access, Word, Excel, VBA"
-    - title: "System Setup/Administration"
-      text: "Linux, Linode, sh, bash, ksh, DOS, Apache, JBoss, MySQL, postgresql, Oracle"
-    - title: "OS"
-      text: "Unix (Linux, Mac OS), Windows, Android, iOS"
-    - title: "Languages"
-      text: "French (fluent, first language), English (good level, TOEIC: 945/990, IELTS: 7.5/9)"
-    - title: "Others"
-      text: "Driving licence"
-    - title: "Leisures"
-      text: "Photography, Skiing, Cinema"
+  principles:
+    title: "Principles"
+    points:
+      - title: "As a project guy"
+        data:
+          My reference: |
+            "Getting Real":http://gettingreal.37signals.com by "37 Signals":http://37signals.com/
+        text: |
+           * Be empirical
+           * Be agile
+           * Be focused
+
+      - title: "As a team guy"
+        data:
+          My reference: |
+            "Code Leaders And Beautiful Teams":http://www.infoq.com/presentations/Code-Leaders-Beautiful-Teams by "Roy Osherove":http://osherove.com/
+        text: |
+           * Care about people
+           * Help people grow
+           * Remove bottlenecks
+
+      - title: "As a code guy"
+        data:
+          My reference: |
+            "The Productive Programmer":http://shop.oreilly.com/product/9780596519544.do by "Neal Ford":http://nealford.com/
+        text: |
+           * DRY (Don't Repeat Yourself)
+           * Automatize
+           * Do shortcuts
 
 
-passion:
-  title: Passion
-  points:
-    - title: "A job for passionate people"
-      text: |
-        The way I see it, Web development is not just any job.
-        
-        Both software and the Web are relatively new industries, in which not only the methods and tools of production, but the products themselves evolve at a crazy pace. Just keeping up requires a great deal of work, interest and curiosity. In one word&nbsp;: passion.
-        
-        You need to read books, watch talks, follow blogs, try products, figure out wether and how they can help, care about what works and what doesn't, constantly seek to improve your way of doing. You always must get better. And it takes work, time and passion.
-        
-        I do Web development because I love that stuff, and most of all, I love getting better at it. One of the best parts is that you never get out of new things to learn.
+  skills:
+    title: "Skills"
+    points:
+      - title: "Web development"
+        text: "HTML5, CSS3, Javascript, jQuery, JSON, Coffeescript, SASS, Compass, XML, XSL, XPath, Typo3, Wordpress"
+      - title: "Ruby"
+        text: "Ruby On Rails, FactoryGirl, UnitTest, RSpec, Haml, Middleman"
+      - title: "Java"
+        text: "Struts 1 & 2, Hibernate, Spring, EJB2, JDBC, Talend, JUnit, TestNG, JBoss, Weblogic, Jetty, JProfiler, Grails"
+      - title: "PHP"
+        text: "Symfony, Doctrine, PHPUnit, Typo3, PEAR"
+      - title: "Databases"
+        text: "MySQL, postgresql, Oracle DB and PL/SQL, SQLite, H2DB, HSQLDB"
+      - title: "Development tools"
+        text: "Eclipse, Sublime Text 2, Hudson/Jenkins, Travis CI, HP Quality Center, Github, Git, SVN, CVS"
+      - title: "Other tools"
+        text: "Photoshop, Access, Word, Excel, VBA"
+      - title: "System Setup/Administration"
+        text: "Linux, Linode, sh, bash, ksh, DOS, Apache, JBoss, MySQL, postgresql, Oracle"
+      - title: "OS"
+        text: "Unix (Linux, Mac OS), Windows, Android, iOS"
+      - title: "Languages"
+        text: "French (fluent, first language), English (good level, TOEIC: 945/990, IELTS: 7.5/9)"
+      - title: "Others"
+        text: "Driving licence"
+      - title: "Leisures"
+        text: "Photography, Skiing, Cinema"
 
-    - title: "A commitment to quality and productivity"
-      text: |
-        Softwares arguably count among the "most complex products":http://www.cs.nott.ac.uk/~cah/G51ISS/Documents/NoSilverBullet.html a craftman can build.
-        
-        Building software right requires a constant commitment to quality. To deliver it in time and at an acceptable cost, you also need a strong focus on productivity.
-        
-        Both these domains have known the most interesting progresses over the last years, with the growing success of new packaging and deployment tools, automated testing and continous integration, agile methodologies and innovative frameworks.
-        
-        As a developer, I regard applying these innovations to the improvement of my work's quality and productivity as one of the most exciting parts of my day.
 
-    - title: "What I am into"
-      text: |
-        After a few years working on professional projects in Java/J2EE and PHP, I am now immerging myself into the universe of Ruby On Rails and agile methodologies, partly because of their elegance, but mostly for their emphasis on innovation, testing and automation.
-        
-        I'll be highly motivated by any opportunity to improve my skills and experience into these specific domains.
-        
-        I will also gladly consider offers to leverage my experience and commitment to quality on a Java, PHP, CMS, or more widely any Web-related project.
-        
-        So if you're interested in giving me the pleasure to build great stuff for you, please "send me an email":mailto:emmanuel.joubaud@gmail.com.
+  passion:
+    title: "Passion"
+    points:
+      - title: "A job for passionate people"
+        text: |
+          The way I see it, Web development is not just any job.
+          
+          Both software and the Web are relatively new industries, in which not only the methods and tools of production, but the products themselves evolve at a crazy pace. Just keeping up requires a great deal of work, interest and curiosity. In one word&nbsp;: passion.
+          
+          You need to read books, watch talks, follow blogs, try products, figure out wether and how they can help, care about what works and what doesn't, constantly seek to improve your way of doing. You always must get better. And it takes work, time and passion.
+          
+          I do Web development because I love that stuff, and most of all, I love getting better at it. One of the best parts is that you never get out of new things to learn.
+
+      - title: "A commitment to quality and productivity"
+        text: |
+          Softwares arguably count among the "most complex products":http://www.cs.nott.ac.uk/~cah/G51ISS/Documents/NoSilverBullet.html a craftman can build.
+          
+          Building software right requires a constant commitment to quality. To deliver it in time and at an acceptable cost, you also need a strong focus on productivity.
+          
+          Both these domains have known the most interesting progresses over the last years, with the growing success of new packaging and deployment tools, automated testing and continous integration, agile methodologies and innovative frameworks.
+          
+          As a developer, I regard applying these innovations to the improvement of my work's quality and productivity as one of the most exciting parts of my day.
+
+      - title: "What I am into"
+        text: |
+          After a few years working on professional projects in Java/J2EE and PHP, I am now immerging myself into the universe of Ruby On Rails and agile methodologies, partly because of their elegance, but mostly for their emphasis on innovation, testing and automation.
+          
+          I'll be highly motivated by any opportunity to improve my skills and experience into these specific domains.
+          
+          I will also gladly consider offers to leverage my experience and commitment to quality on a Java, PHP, CMS, or more widely any Web-related project.
+          
+          So if you're interested in giving me the pleasure to build great stuff for you, please "send me an email":mailto:emmanuel.joubaud@gmail.com.
 
 
 

@@ -1,0 +1,79 @@
+/**
+ * Typography
+ *
+ * By Emmanuel Joubaud
+ */
+
+@import "base";
+
+// === Typography and colors ===
+
+body {
+    padding: 10px;
+    font: 1em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    color: #515047;
+    background-color: #F2F1DB;
+}
+h1 { font-size: 3em; }
+h2, h3 { font-size: 2em; }
+h1 {
+    color: #515047;
+    line-height: 0.8;
+    letter-spacing: -0.05em;
+    text-align: right;
+    margin: 0.5em 0;
+}
+h2 {
+    color: #d4d3c0;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    text-align: right;
+    margin: 0.5em 0;
+}
+h3 {
+    color: $remarkable-text-color;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    margin: 0 0 0.5em 0;
+}
+h4 {
+    margin: 0;
+}
+a {
+    color: $remarkable-text-color;
+    text-decoration: none;
+    font-weight: 550;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited, a:active {
+    color: $remarked-text-color;
+}
+p {
+    // font-size: 1.25em; 
+    line-height: 1.15;
+    margin: 0.75em 0;
+    color: $text-color;
+}
+small {
+    font-size: 1em; 
+    color: $remarkable-text-color;
+}
+ul {
+    margin-top: 0.5em;
+}
+.point-date {
+    color: $aux-text-color;
+}
+.label {
+    color: $aux-text-color;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+
+
+
+
+

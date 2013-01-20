@@ -14,34 +14,35 @@
     / Place favicon.ico and apple-touch-icon.png in the root directory
     %link{:href => "css/normalize.css", :rel => "stylesheet"}
     %link{:href => "css/main.css", :rel => "stylesheet"}
-    %link{:href => "css/fluid-squares.css", :rel => "stylesheet"}
     %script{:src => "js/vendor/modernizr-2.6.1.min.js"}
 
   %body
     /[if lt IE 7]
       %p{:class => "chromeframe"}
         You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
-    %h1 Emmanuel Joubaud
-    %h2 Ruby, Java and PHP Web developer
+    %h1= data.resume.title
+    %h2= data.resume.subtitle
     %nav#nav-bar.nav-bar
       %ul
-        = list_of(data.resume) do |name, section|
+        = list_of(data.resume.sections) do |name, section|
           %a{:href => "##{name}"}= section.title
 
     .resume.clearfix
-      - data.resume.each do |name, section|
+      - data.resume.sections.each do |name, section|
         %section{:id => name}
           %h3= section.title
           - section.points.each do |point|
             .point
               %span.point-date= point.date
               %h4.point-title
+                -# The extra space below avoids textile's <p> wrap
                 :textile
                    #{point.title}
               - point.data && point.data.each do |label, data|
                 %span.label
                   = "#{label}:"
                 %span.labelled-data
+                  -# The extra space below avoids textile's <p> wrap
                   :textile
                      #{data}
               .point-text

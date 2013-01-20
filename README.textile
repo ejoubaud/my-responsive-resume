@@ -1,0 +1,52 @@
+h1. My Responsive Resume
+
+My Responsive Resume is the easiest way to build an online, nice-looking and responsive resume to impress your next employer.
+
+It uses "Middleman":http://middlemanapp.com/ for static site generation, "Yaml":http://www.yaml.org/ and "Textile":http://textile.thresholdstate.com/ to store your resume's information, and a "fluid squares":http://fluidsquares.com/ layout to display them.
+
+It sounds complicated but it is really fast and simple. Just follow the steps below to get your resume up and running in a few minutes.
+
+
+h1. Manual
+
+h2. Pre-requisites
+
+You just need "Ruby":http://www.ruby-lang.org/en/downloads/ and "Bundler":http://gembundler.com/ installed to generate your site.
+
+These are pretty common and useful tools, but if you don't have them already, just follow the links for instructions.
+
+You also need a host Web server to deploy your resume to. My Responsive Resume generates only static pages, so really any server will do.
+
+No need for it to run PHP, Ruby, Java or anything. You just drop the generated files and it's done.
+
+h2. Get My Responsive Resume
+
+Just "fork this repository":https://github.com/ejoubaud/my-responsive-resume/fork/ , and clone it on your computer.
+
+h2. Edit your resume
+
+You can edit your resume's information in @data/resume.yml@.
+
+It uses a "Yaml":http://www.yaml.org/ syntax, which is easy to read and write. Take inspiration from the examples, and just be careful to *respect the indentation*.
+
+The structure of this file should be pretty intuitive, but here is a quick description :
+
+* Your resume is divided into *sections*. Each section will be represented as a square on your resume. Each section has a key (the identifier, e.g. _experience_), a *title* (the display title, e.g. _Experience_) and a list of *points*.
+* *Points* are subdivisions of your section. Depending on your section, a point can be a training you made, a job you had, or a domain of skills you master.
+* Each *point* must have a display *title*, and a *text*.
+* Each *point* may have a *date*, and some labelled *data*.
+* Labelled *data* are just additional data about your point (client, employer...) with a label. In _Client: My client_, _Client_ is the label and _My client_ is the data. They will be displayed beneath your point's title to add additional informations about the point. They are optional.
+* The points' *title*, *data* and *text* are compiled with "Textile":http://textile.thresholdstate.com/, so feel free to use links or lists.
+
+h2. Deploy
+
+*More on this topic later.*
+
+
+h1. FAQ
+
+h2. Why use Textile instead of the more widespread Markdown ?
+
+Some Yaml data needed to be included in the page without being wrapped with @<p>@ tags. Markdown doesnot allow that. Textile does just by adding a whitespace before the line.
+
+
