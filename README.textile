@@ -23,6 +23,13 @@ h2. Get My Responsive Resume
 
 Just "fork this repository":https://github.com/ejoubaud/my-responsive-resume/fork/ , and clone it on your computer.
 
+Then go to your project folder and run the bundler install in a command line :
+
+bc. 
+cd /path/to/my-responsive-resume/
+bundle install
+
+
 h2. Edit your resume
 
 You can edit your resume's information in @data/resume.yml@.
@@ -38,9 +45,25 @@ The structure of this file should be pretty intuitive, but here is a quick descr
 * Labelled *data* are just additional data about your point (client, employer...) with a label. In _Client: My client_, _Client_ is the label and _My client_ is the data. They will be displayed beneath your point's title to add additional informations about the point. They are optional.
 * The points' *title*, *data* and *text* are compiled with "Textile":http://textile.thresholdstate.com/, so feel free to use links or lists.
 
+h2. Test it
+
+Run the Middleman server:
+
+bc. bundle exec middleman
+
+Then you should be able to see your resume in any browser by typing @http://localhost:4567@
+
+If you change the Yaml data, you must stop the server and restart it to see the changes.
+
 h2. Deploy
 
-*More on this topic later.*
+Build the static site with the following command in your project directory:
+
+bc. bundle exec middleman build
+
+Then just upload the content of the generated @build@ folder onto your Web host.
+
+*Capistrano recipe for auto-deployment coming soon.*
 
 
 h1. FAQ
