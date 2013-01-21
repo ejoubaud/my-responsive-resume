@@ -1,5 +1,7 @@
 title: "Emmanuel Joubaud"
 subtitle: "Ruby, PHP and Java Web developer"
+#qr_code_url: "http://ejoubaud.com/"
+
 sections:
   training:
     title: "Training"
@@ -31,7 +33,7 @@ sections:
            Employer: |
             "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
            Client: |
-            "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
+            "AFPA":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html (Europe's biggest professional training organism)
          text: |
             * Supervision of developments, quality and planning for a 4-persons team
             * Development of upgrades on a Struts2/Hibernate app
@@ -44,7 +46,7 @@ sections:
           Employer: |
             "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
           Client: |
-            "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
+            "AFPA":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
         text: |
            * Edition of bills for a huge part of our client's business (60M€ yearly turnover)
            * Reverse-engineering on a data-extraction application
@@ -55,9 +57,9 @@ sections:
         date: "March-October 2011"
         data:
           Employer: |
-            "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
+            "Sopra Group":http://www.sopragroup.com/page&p_hpmen_emo=ABOUT31&lang_code=EN&mdp=kf
           Client: |
-            "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
+            "AFPA":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
         text: |
            * Business analysis and development using Talend Open Studio
            * Integration of data from an eco-system of 10 apps into one central DB
@@ -69,7 +71,7 @@ sections:
           Employer: |
             "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
           Client: |
-            "AFPA (Europe's biggest professional training organism)":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
+            "AFPA":http://www.afpa.fr/l-afpa/l-afpa-engagee-et-solidaire.html
         text: |
            * Development on 3 applications and their interfaces, using Struts, EJB2, JDBC, PL/SQL, Spring Batch
            * Redaction and execution of tests using HP Quality Center
@@ -90,9 +92,18 @@ sections:
     title: "Portfolio"
     points:
       - title: |
+          "My Responsive Resume":https//github.com/ejoubaud/vdf
+        data:
+          Techno: "Middleman, Compass, Prawn (PDF generation), Haml"
+        text: |
+          A global capitalization of my work on this little resume. I made it easily reusable, open-source and documented.
+          
+          I should add a PDF generation, a photo and some personal data soon.
+
+      - title: |
           "Versions des Faits":https//github.com/ejoubaud/vdf
         data:
-          Techno: "Ruby On Rails, CSS3, Travis CI"
+          Techno: "Ruby On Rails, CanCan, CSS3, Travis CI"
         text: |
           A community-driven information and analysis website about TV and Internet documentaries. Checks the facts, reveals the opinions and presents critical or alternative points of view. French only for now.
           
@@ -105,9 +116,19 @@ sections:
         text: |
           A simple jQuery plugin that adds drag'n'drop support to a page area linked to a file input.
 
+      - title: |
+          "Stacking XP":http//www.stacking-xp.net/
+        data:
+          Techno: "Wordpress"
+        text: |
+          My developer blog.
+          
+          Just a messy stack really, where I throw some development stuff I didn't find anywhere else and had to figure out by myself, so they might save someone's time in the same situation.
+
 
   principles:
     title: "Principles"
+    remove_from_pdf: yes
     points:
       - title: "As a project guy"
         data:
@@ -141,9 +162,9 @@ sections:
     title: "Skills"
     points:
       - title: "Web development"
-        text: "HTML5, CSS3, Javascript, jQuery, JSON, Coffeescript, SASS, Compass, XML, XSL, XPath, Typo3, Wordpress"
+        text: "HTML5, CSS3, Javascript, jQuery, JSON, Coffeescript, SASS, Compass, XML, XSL, XPath, Typo3, Wordpress, Responsiveness"
       - title: "Ruby"
-        text: "Ruby On Rails, FactoryGirl, UnitTest, RSpec, Haml, Middleman"
+        text: "Ruby On Rails, FactoryGirl, UnitTest, RSpec, Haml, Middleman, Prawn, CanCan"
       - title: "Java"
         text: "Struts 1 & 2, Hibernate, Spring, EJB2, JDBC, Talend, JUnit, TestNG, JBoss, Weblogic, Jetty, JProfiler, Grails"
       - title: "PHP"
@@ -168,6 +189,7 @@ sections:
 
   passion:
     title: "Passion"
+    remove_from_pdf: yes
     points:
       - title: "A job for passionate people"
         text: |

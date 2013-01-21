@@ -4,7 +4,7 @@ My Responsive Resume is the easiest way to build an online, nice-looking and res
 
 It uses "Middleman":http://middlemanapp.com/ for static site generation, "Yaml":http://www.yaml.org/ and "Textile":http://textile.thresholdstate.com/ to store your resume's information, and a "fluid squares":http://fluidsquares.com/ layout to display them.
 
-It sounds complicated but it is really fast and simple. Just follow the steps below to get your resume up and running in a few minutes.
+It sounds complicated but it is really fast and simple. You just need to fill a file with your resume's informations, and throw a couple of command lines. Just follow the steps below and get your resume up and running in a few minutes.
 
 
 h1. Manual
@@ -19,14 +19,14 @@ You also need a host Web server to deploy your resume to. My Responsive Resume g
 
 No need for it to run PHP, Ruby, Java or anything. You just drop the generated files and it's done.
 
+
 h2. Get My Responsive Resume
 
 Just "fork this repository":https://github.com/ejoubaud/my-responsive-resume/fork/ , and clone it on your computer.
 
 Then go to your project folder and run the bundler install in a command line :
 
-bc. 
-cd /path/to/my-responsive-resume/
+bc. cd /path/to/my-responsive-resume/
 bundle install
 
 

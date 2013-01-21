@@ -17,14 +17,14 @@ body {
 h1 { font-size: 3em; }
 h2, h3 { font-size: 2em; }
 h1 {
-    color: #515047;
+    color: $title-color;
     line-height: 0.8;
     letter-spacing: -0.05em;
     text-align: right;
     margin: 0.5em 0;
 }
 h2 {
-    color: #d4d3c0;
+    color: $subtitle-color;
     line-height: 0.9;
     letter-spacing: -0.05em;
     text-align: right;
