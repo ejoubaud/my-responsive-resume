@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Emmanuel Joubaud -- Crator -- @ejoubaud
 
 # THANKS
 
@@ -11,5 +11,6 @@
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
+    HTML5, CSS3, Compass
     jQuery, Modernizr
+    Middleman, Prawn

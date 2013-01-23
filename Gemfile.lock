@@ -84,9 +84,9 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
-    prawn (0.12.0)
+    prawn (1.0.0.rc1)
       pdf-reader (>= 0.9.0)
-      ttfunk (~> 1.0.2)
+      ttfunk (~> 1.0.3)
     rack (1.4.1)
     rack-protection (1.3.2)
       rack
@@ -129,5 +129,5 @@ DEPENDENCIES
   RedCloth (~> 4.2.9)
   debugger
   middleman (~> 3.0.6)
-  prawn (~> 0.12.0)
+  prawn (~> 1.0.0.rc1)
   rqrcode_png (~> 0.1.1)

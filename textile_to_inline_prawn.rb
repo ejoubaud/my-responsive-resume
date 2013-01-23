@@ -59,11 +59,11 @@ module Prawn
       def ul str
         prawned = ''
         str.each_line do |line|
-          prawned += line.sub(/^\*+/) do |match|
+          prawned += line.sub(/^\*+\s/) do |match|
             # if one * starts the line, returns " o "
             # if two * start  the line, returns "   o "
             Prawn::Text::NBSP +
-              Prawn::Text::NBSP * 2 * (match.length-1) +
+              Prawn::Text::NBSP * 2 * (match.length-2) +
               '•' +
               Prawn::Text::NBSP
           end
@@ -76,9 +76,9 @@ module Prawn
         indexes = Hash.new(0)
         str.each_line do |line|
           matched = false
-          prawned += line.sub(/^#+/) do |match|
+          prawned += line.sub(/^#+\s/) do |match|
             matched = true
-            indent = match.length
+            indent = match.length-1
             indexes[indent] += 1
             # Resets indexes of all lower level when we increase one level
             indexes.each_key { |k, v| indexes[k] = 0 if k > indent }

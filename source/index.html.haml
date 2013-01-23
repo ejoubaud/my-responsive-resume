@@ -8,20 +8,26 @@
   %head
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
-    %title
-    %meta{:content => "", :name => "description"}
+    %title= "#{ data.resume.title }'s responsive resume"
+    %meta{:content => "#{data.resume.title} - #{data.resume.subtitle}. Please browse my online resume: #{data.resume.sections.map{ |_, s| s.title }.join(", ")}...", :name => "description"}
     %meta{:content => "width=device-width", :name => "viewport"}
     / Place favicon.ico and apple-touch-icon.png in the root directory
-    %link{:href => "css/normalize.css", :rel => "stylesheet"}
-    %link{:href => "css/main.css", :rel => "stylesheet"}
-    %script{:src => "js/vendor/modernizr-2.6.1.min.js"}
+    = stylesheet_link_tag 'normalize'
+    = stylesheet_link_tag 'main'
+    = javascript_include_tag 'modernizr-2.6.1.min.js'
 
   %body
     /[if lt IE 7]
       %p{:class => "chromeframe"}
         You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
-    %h1= data.resume.title
-    %h2= data.resume.subtitle
+    %header.clearfix
+      .avatar-box
+        = image_tag data.resume.avatar, class: "avatar" if avatar? data.resume.avatar
+      %h1= data.resume.title
+      %h2= data.resume.subtitle
+      .personal_data
+        = personal_data data.resume
+    
     %nav#nav-bar.nav-bar
       %ul
         = list_of(data.resume.sections) do |name, section|

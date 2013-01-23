@@ -1,7 +1,20 @@
+# Title (your name) and subtitle (desired occupation, catch phrase, motto...) for your resume (required)
 title: "Emmanuel Joubaud"
 subtitle: "Ruby, PHP and Java Web developer"
-#qr_code_url: "http://ejoubaud.com/"
 
+# Personal datas (optional)
+location: "Melbourne"
+birth: 1985-11-12
+email: "ejoubaud@gmail.com"
+phone: "04 02 14 22 83"
+
+# Filename for the photo, placed in img directory (optional)
+avatar: 'avatar.jpg'
+
+# Site URL for PDF QR Code (optional)
+qr_code_url: "http://ejoubaud.com/"
+
+# Each section has a key (e.g. training), a title (e.g. "Training") and a list of points
 sections:
   training:
     title: "Training"
@@ -50,7 +63,7 @@ sections:
         text: |
            * Edition of bills for a huge part of our client's business (60M€ yearly turnover)
            * Reverse-engineering on a data-extraction application
-           * One-man project. Direct contact with the client. Built a solid trust relationship
+           * One-man project. Built a solid trust relationship with our client.
            * Very short deadlines, always honored
 
       - title: "Developer, then team lead, on a Talend ETL project"
@@ -92,16 +105,14 @@ sections:
     title: "Portfolio"
     points:
       - title: |
-          "My Responsive Resume":https//github.com/ejoubaud/vdf
+          "My Responsive Resume":https://github.com/ejoubaud/my-responsive-resume
         data:
           Techno: "Middleman, Compass, Prawn (PDF generation), Haml"
         text: |
           A global capitalization of my work on this little resume. I made it easily reusable, open-source and documented.
-          
-          I should add a PDF generation, a photo and some personal data soon.
 
       - title: |
-          "Versions des Faits":https//github.com/ejoubaud/vdf
+          "Versions des Faits":https://github.com/ejoubaud/vdf
         data:
           Techno: "Ruby On Rails, CanCan, CSS3, Travis CI"
         text: |
@@ -219,7 +230,7 @@ sections:
           
           I will also gladly consider offers to leverage my experience and commitment to quality on a Java, PHP, CMS, or more widely any Web-related project.
           
-          So if you're interested in giving me the pleasure to build great stuff for you, please "send me an email":mailto:emmanuel.joubaud@gmail.com.
+          So if you're interested in giving me the pleasure to build great stuff for you, please send me an email.
 
 
 

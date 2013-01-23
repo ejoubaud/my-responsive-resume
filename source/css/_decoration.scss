@@ -6,21 +6,15 @@
 
 @import "base";
 
-// Navigation bar
-.nav-bar ul {
-    padding: 1em;
+// Avatar
+.avatar-box {
+    @include box-shadow(
+      inset 0 0 0.5em 0.5em $bg-color);
 
-    li {
-        border-left: 2px solid $hilight-bg-color;
-        padding: 0.5em;
-
-        a {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-    }
-    li:hover, li:active {
-        border-left: 2px solid $remarkable-text-color;
+    .avatar {
+        position: relative;
+        z-index: -1;
+        @include transition(all .2s ease);
     }
 }
 
@@ -46,7 +40,7 @@ section.maximized {
 // Maximized or hovered sections
 .maximized, section:hover {
     background-color: $hilight-bg-color;
-    @include box-shadow($shadow-color 0 0 0.4em 0.5em);
+    @include box-shadow(0 0 0.4em 0.5em $shadow-color);
 
     p {
         color: $hilight-text-color;

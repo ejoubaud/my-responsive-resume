@@ -7,15 +7,91 @@
 
 @import "base";
 
-/* Primary Styles */
+/* Primary Styles (before media queries) */
+
+body {
+	padding: 2.5%;
+}
 section {
 	float: left;
 	width: 100%;
 	height: auto;
 	margin-bottom: 30px;
-	text-decoration: none;
 }
+
+// to keep squares in mobile mob
+// section {
+// 	width: 100%;
+// 	height: 0;
+// 	margin-bottom: 5%;
+// 	padding-bottom: 100%;
+// 	overflow: hidden;
+// }
+// .nav-bar {display: none;}
+
+header {
+	margin-bottom: 2.5em;
+}
+
 img { max-width: 100%; }
+
+.avatar-box {
+	float: left;
+	margin: 0 2em;
+	border: 2px;
+	display: none;
+}
+.avatar {
+	width: 12em;
+	height: auto;
+}
+
+
+/* Navigation bar */
+
+.nav-bar ul {
+	margin: 2.5em;
+	padding: 0;
+	border: 0 solid $hilight-bg-color;
+	border-width: 2px 0;
+
+	li {
+		margin: 0;
+		border: 0 solid $hilight-bg-color;
+		border-width: 0 2px;
+		padding: 0.5em;
+		text-align: center;
+
+		a {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+	}
+	li:hover, li:active {
+		border-color: $remarkable-text-color;
+	}
+}
+
+
+/* Maximization */
+
+section {
+	position: relative;
+	cursor: pointer;
+}
+.point {
+	position: relative;
+}
+.maximized {
+	position: fixed;
+	top: 1em; bottom: 1em;
+	height: auto; width: 90%;
+	margin: auto; padding: 2.5%;
+	overflow: auto;
+	z-index: 5;
+	@include opacity(0.95);
+}
+
 
 /* Media Queries */
 
@@ -25,10 +101,7 @@ img { max-width: 100%; }
 	body {
 		max-width: 1600px;
 		margin: 0 auto;
-		padding: 40px;
-		/*overflow: hidden;*/
 	}
-	.nav-bar { display: block; }
 }
 
 /* Two Column */
@@ -54,21 +127,14 @@ img { max-width: 100%; }
 	}
 }
 
-
 /* Font Size Control Media Queries */
 
-@media screen and (max-width:500px) {
-
-}
 @media screen and (min-width:500px) {
 	h1 {
 		font-size: 3.5em;
-		margin: 0.67em 0;
+		line-height: 0.8;
 	}
-	h2 {
-		font-size: 2em;
-		margin: 1em 0 1.5em 0;
-	}
+	h2 { font-size: 2em; }
 	h3 { font-size: 2em; }
 	h4 { font-size: 1em; }
 	p, li { font-size: 1em; line-height: 1.2; }
@@ -77,11 +143,19 @@ img { max-width: 100%; }
 	h3 { font-size: 2.5em; }
 }
 @media screen and (min-width:700px) {
-	h1 { font-size: 3.5em; }
-	h2 { font-size: 2.5em; }
+	h1 {
+		font-size: 3.5em;
+		text-align: right;
+	}
+	h2 {
+		font-size: 2.5em;
+		text-align: right;
+	}
 	h3 { font-size: 3em; }
 	h4 { font-size: 1.25em; }
 	p { font-size: 1.25em; }
+	.personal_data { text-align: right; }
+	.avatar-box { display: block; }
 }
 @media screen and (min-width:800px) {
 	h3 { font-size: 2.5em; }
@@ -94,6 +168,7 @@ img { max-width: 100%; }
 	h3 { font-size: 3.25em; }
 	h4 { font-size: 1.25em; }
 	p { font-size: 1.25em; }
+	// .avatar { width: 15em; }
 }
 @media screen and (min-width:1200px) {
 	p { font-size: 1em; }
@@ -109,25 +184,6 @@ img { max-width: 100%; }
 }
 
 
-/* Maximization */
-
-section {
-	position: relative;
-	cursor: pointer;
-}
-.point {
-	position: relative;
-}
-.maximized {
-	position: fixed;
-	top: 1em; bottom: 1em;
-	height: auto; width: 87%;
-	margin: auto; padding: 1em;
-	right: 1em; left: 1em;
-	overflow: auto;
-	z-index: 5;
-	@include opacity(0.95);
-}
 
 
 

@@ -1,10 +1,8 @@
 h1. My Responsive Resume
 
-My Responsive Resume is the easiest way to build an online, nice-looking and responsive resume to impress your next employer.
+My Responsive Resume is the easiest way to build an online, nice-looking and responsive resume to impress your next employer. It even generates a PDF for you.
 
-It uses "Middleman":http://middlemanapp.com/ for static site generation, "Yaml":http://www.yaml.org/ and "Textile":http://textile.thresholdstate.com/ to store your resume's information, and a "fluid squares":http://fluidsquares.com/ layout to display them.
-
-It sounds complicated but it is really fast and simple. You just need to fill a file with your resume's informations, and throw a couple of command lines. Just follow the steps below and get your resume up and running in a few minutes.
+Just fill a file with your informations, throw a couple of command lines, and you'll get a pretty resume static site ready to throw online.
 
 
 h1. Manual
@@ -34,16 +32,15 @@ h2. Edit your resume
 
 You can edit your resume's information in @data/resume.yml@.
 
-It uses a "Yaml":http://www.yaml.org/ syntax, which is easy to read and write. Take inspiration from the examples, and just be careful to *respect the indentation*.
+Just take example on the existing structure and *respect the indentation*!
 
-The structure of this file should be pretty intuitive, but here is a quick description :
+The structure of this file should be pretty self-explanatory, but if you need a reference, see the FAQ below.
 
-* Your resume is divided into *sections*. Each section will be represented as a square on your resume. Each section has a key (the identifier, e.g. _experience_), a *title* (the display title, e.g. _Experience_) and a list of *points*.
-* *Points* are subdivisions of your section. Depending on your section, a point can be a training you made, a job you had, or a domain of skills you master.
-* Each *point* must have a display *title*, and a *text*.
-* Each *point* may have a *date*, and some labelled *data*.
-* Labelled *data* are just additional data about your point (client, employer...) with a label. In _Client: My client_, _Client_ is the label and _My client_ is the data. They will be displayed beneath your point's title to add additional informations about the point. They are optional.
-* The points' *title*, *data* and *text* are compiled with "Textile":http://textile.thresholdstate.com/, so feel free to use links or lists.
+
+h2. Add a photo (optional)
+
+Replace the photo file named @avatar.jpg@ in @source/img@ with your own photo, or just delete it.
+
 
 h2. Test it
 
@@ -63,13 +60,71 @@ bc. bundle exec middleman build
 
 Then just upload the content of the generated @build@ folder onto your Web host.
 
-*Capistrano recipe for auto-deployment coming soon.*
-
 
 h1. FAQ
 
+h2. Is it a good idea to publish my email and phone number on the Internet ?
+
+Generally, it is not, because of spam bots crawling the Web looking for email addresses to send spam to.
+
+But the data you provide in the _phone_ and _email_ field of @resume.yml@ are obfuscated both in the Web page and the generated PDF.
+
+In the Web page, they are written using Javascript, so if the crawler doesn't process Javascript (they usually don't), it won't even know there's somehting here. In the PDF, it just inserts invisible characters between the letters, so the crawler harvests only a useless email address/phone number.
+
+Of course a human harvester, or a new generation of crawlers, might still be able to fetch them. There is no 100% solution, this is just the safest solution we can provide.
+
+So publish them at your own risk.
+
+*NB:* There is no protection in the other fields than _phone_ end _email_, so do not give them in the text of the sections.
+
+h2. I don't understand that @resume.yml@. How am I supposed to fill it ?
+
+It uses a "Yaml":http://www.yaml.org/ syntax, which is easy to read and write for both humans and machines. Learn more about it on "its Wikipedia page":http://en.wikipedia.org/wiki/YAML
+
+It relies on indentation (the number of whitespaces at the beginning of each) for its organization, so be careful about it and don't use tabulations.
+
+Here is a description of the data structure :
+
+* You can enter personal informations, such as your name and desired job (_title_ and _subtitle_, required), your current location, birth date, email and phone number (optional). Email and phone number are obfuscated for spam crawlers.
+* You can provide a photography or avatar (optional), by placing an image file in the @source/img@ folder, and by mentioning its name in the @avatar:@ field (default name: @avatar.jpg@)
+* Your resume is divided into *sections*. Each section will be represented as a square on your resume.
+** Each section has a key (the identifier, e.g. _experience_), a *title* (the display title, e.g. _Experience_) and a list of *points*.
+** You can choose to exclude some sections in the PDF, by adding them a @remove_from_pdf: yes@ attribute
+* *Points* are subdivisions of your section. Depending on your section, a point can be a training you made, a job you had, or a domain of skills you master.
+** Each *point* must have a display *title*, and a *text*.
+** Each *point* may have a *date*, and some labelled *data*.
+*** Labelled *data* are just additional data about your point (client, employer...) with a label. In @Client: "My client"@, @Client@ is the label and @My client@ is the data. They will be displayed beneath your point's title to add additional informations about the point. They are optional.
+** The points' *title*, *data* and *text* are compiled with "Textile":http://textile.thresholdstate.com/, so feel free to use links or lists.
+
+h2. Can I use any Textile tags ?
+
+Yes and no.
+
+The Web page should work fine with all Textile (at least all that is supported by the "RedCloth":http://redcloth.org/ library).
+
+In the PDF, the only supported features are :
+
+* Lists (ordered and unordered)
+* Links (URL and anchor)
+* Bold and italic
+
+The reason is that Textile is meant to generate HTML, not PDF, so I had to write a quick and dirty Textile parser for "Prawn":http://prawn.majesticseacreature.com/ (the library that generates the PDF).
+
+h2. What technologies are used on this project ?
+
+It runs on :
+
+* "Middleman":http://middlemanapp.com/ for static site generation, embedding "Compass":http://compass-style.org/, "CoffeeScript":http://coffeescript.org/ , "Haml":http://haml.info/ , among other goodies
+* "Yaml":http://www.yaml.org/ and "Textile":http://textile.thresholdstate.com/ to store your resume's informations
+* A "fluid squares":http://fluidsquares.com/ layout
+* "Prawn":http://prawn.majesticseacreature.com/ to generate the PDF.
+
+Thanks to the teams of all these amazing open-source projects.
+
 h2. Why use Textile instead of the more widespread Markdown ?
 
-Some Yaml data needed to be included in the page without being wrapped with @<p>@ tags. Markdown doesnot allow that. Textile does just by adding a whitespace before the line.
+Some Yaml data needed to be included in the page without being wrapped with @<p>@ tags. Markdown doesnot allow that, whereas Textile does (easily). Anyway Markdown doesn't have any Prawn parser either.
+
+Most common features (italic, bold, lists) either work the same in both languages, or are arguably simpler with Textile (links).
 
 
