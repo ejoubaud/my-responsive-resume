@@ -9,7 +9,7 @@ h1. Manual
 
 h2. Pre-requisites
 
-You just need "Ruby":http://www.ruby-lang.org/en/downloads/ and "Bundler":http://gembundler.com/ installed to generate your site.
+All you need is "Ruby":http://www.ruby-lang.org/en/downloads/ and "Bundler":http://gembundler.com/ installed to generate your site.
 
 These are pretty common and useful tools, but if you don't have them already, just follow the links for instructions.
 
@@ -20,7 +20,7 @@ No need for it to run PHP, Ruby, Java or anything. You just drop the generated f
 
 h2. Get My Responsive Resume
 
-Just "fork this repository":https://github.com/ejoubaud/my-responsive-resume/fork/ , and clone it on your computer.
+"Fork this repository":https://github.com/ejoubaud/my-responsive-resume/fork/ , and clone it on your computer, or just download it using the "ZIP":https://github.com/ejoubaud/my-responsive-resume/archive/master.zip link.
 
 Then go to your project folder and run the bundler install in a command line :
 
@@ -32,7 +32,7 @@ h2. Edit your resume
 
 You can edit your resume's information in @data/resume.yml@.
 
-Just take example on the existing structure and *respect the indentation*!
+Take example on the existing structure and *respect the indentation*!
 
 The structure of this file should be pretty self-explanatory, but if you need a reference, see the FAQ below.
 
