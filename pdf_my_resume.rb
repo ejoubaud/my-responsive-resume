@@ -7,16 +7,19 @@ module Middleman
       def registered(app, options={})
 
         app.after_configuration do
-          # Default file name is the resume's title defined in Yaml file
           resume = data.resume
-          img_dir = File.join source_dir, images_dir
-          file_name = "#{resume.title}.pdf"
 
-          MyResumePdfGenerator.generate(File.join source_dir, file_name) do
-            header resume, img_dir
+          unless resume.do_not_generate_pdf
+            img_dir = File.join source_dir, images_dir
+            # Default file name is the resume's title defined in Yaml file
+            file_name = "#{resume.title}.pdf"
 
-            resume.sections.each do |_, section_data|
-              section section_data unless section_data.remove_from_pdf
+            MyResumePdfGenerator.generate(File.join source_dir, file_name) do
+              header resume, img_dir
+
+              resume.sections.each do |_, section_data|
+                section section_data unless section_data.remove_from_pdf
+              end
             end
           end
         end
@@ -138,7 +141,7 @@ module Middleman
         move_cursor_to original
       end
 
-      # Returns true only if file_name is provided and dir/file_name points to an existing file
+      # true only if file name provided and matches an actual file
       def image_provided? dir, file_name
         file_name && File.exists?(File.join(dir, file_name))
       end

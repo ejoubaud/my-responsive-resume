@@ -85,16 +85,16 @@ It relies on indentation (the number of whitespaces at the beginning of each) fo
 
 Here is a description of the data structure :
 
-* You can enter personal informations, such as your name and desired job (_title_ and _subtitle_, required), your current location, birth date, email and phone number (optional). Email and phone number are obfuscated for spam crawlers.
-* You can provide a photography or avatar (optional), by placing an image file in the @source/img@ folder, and by mentioning its name in the @avatar:@ field (default name: @avatar.jpg@)
 * Your resume is divided into *sections*. Each section will be represented as a square on your resume.
 ** Each section has a key (the identifier, e.g. _experience_), a *title* (the display title, e.g. _Experience_) and a list of *points*.
 ** You can choose to exclude some sections in the PDF, by adding them a @remove_from_pdf: yes@ attribute
 * *Points* are subdivisions of your section. Depending on your section, a point can be a training you made, a job you had, or a domain of skills you master.
 ** Each *point* must have a display *title*, and a *text*.
-** Each *point* may have a *date*, and some labelled *data*.
-*** Labelled *data* are just additional data about your point (client, employer...) with a label. In @Client: "My client"@, @Client@ is the label and @My client@ is the data. They will be displayed beneath your point's title to add additional informations about the point. They are optional.
+** Each *point* may have a *date*, and some additonal *data*.
+*** Additional *data* are just informational content about your point (client, employer...) that comes with a label. In @Client: "My client"@, @Client@ is the label and @My client@ is the content. They will be displayed beneath your point's title to add additional informations about the point. They are optional.
 ** The points' *title*, *data* and *text* are compiled with "Textile":http://textile.thresholdstate.com/, so feel free to use links or lists.
+* You can provide personal informations, such as your name and desired job (_title_ and _subtitle_, required), your current location, birth date, email and phone number (optional). Email and phone number are obfuscated for spam crawlers.
+* You can provide a photography or avatar (optional), by placing an image file in the @source/img@ folder, and by mentioning its name in the @avatar:@ field (default name: @avatar.jpg@)
 
 h2. Can I use any Textile tags ?
 
@@ -109,6 +109,12 @@ In the PDF, the only supported features are :
 * Bold and italic
 
 The reason is that Textile is meant to generate HTML, not PDF, so I had to write a quick and dirty Textile parser for "Prawn":http://prawn.majesticseacreature.com/ (the library that generates the PDF).
+
+h2. PDF is a thing of the past. Can I remove it ?
+
+Yes, there's an option for not generating the pdf: @do_not_generate_pdf: yes@.
+
+That line is ready to be applied in @resume.yml@. Just uncomment it by removing the @# @ in front of it. The PDF will not be generated and the link will not be displayed.
 
 h2. What technologies are used on this project ?
 
@@ -126,5 +132,8 @@ h2. Why use Textile instead of the more widespread Markdown ?
 Some Yaml data needed to be included in the page without being wrapped with @<p>@ tags. Markdown doesnot allow that, whereas Textile does (easily). Anyway Markdown doesn't have any Prawn parser either.
 
 Most common features (italic, bold, lists) either work the same in both languages, or are arguably simpler with Textile (links).
+
+
+
 
 

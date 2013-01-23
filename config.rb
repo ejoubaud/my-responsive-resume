@@ -73,7 +73,8 @@ helpers do
       resume.birth && "#{ age resume.birth } years",
       resume.email && obfuscated_mail_to(resume.email),
       resume.phone && obfuscate(to_nbsp(resume.phone)),
-    ].reject{ |e| e.nil? }.join ' - '
+      resume.do_not_generate_pdf || link_to("PDF version", "#{resume.title}.pdf")
+    ].select{ |e| e.is_a? String }.join ' - '
   end
 
   # true only if file name provided and matches an actual file

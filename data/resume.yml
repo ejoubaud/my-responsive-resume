@@ -14,6 +14,9 @@ avatar: 'avatar.jpg'
 # Site URL for PDF QR Code (optional)
 qr_code_url: "http://ejoubaud.com/"
 
+# Uncomment this line to prevent PDF generation
+# do_not_generate_pdf: no
+
 # Each section has a key (e.g. training), a title (e.g. "Training") and a list of points
 sections:
   training:
@@ -29,8 +32,10 @@ sections:
   experience:
     title: "Experience"
     points:
+      # Each point has a title (required), a text (optional), a date (optional) and some additional data (optional)
       - title: "Tech lead on a Web integration project"
         date: "July-November 2012"
+        # Each additional data has a label (e.g. Employer) and a content (e.g. Sopra Group)
         data:
           Employer: |
             "Sopra Group":http://www.sopragroup.com/page.php?menu_mnemo=ABOUT31&lang_code=EN&mdp=kf
@@ -139,6 +144,7 @@ sections:
 
   principles:
     title: "Principles"
+    # This line prevents the section to be added to the PDF version
     remove_from_pdf: yes
     points:
       - title: "As a project guy"
