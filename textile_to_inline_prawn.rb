@@ -50,9 +50,11 @@ module Prawn
           "(?<text>[^"]+)"
           :
           (?<target>\S+)
+          (?<last_included>[A-Za-z0-9\/]+) # In Textile, all non alpha-numeric or slash characters right before the final whitespace are excluded from the URL
+          (?<excluded>[\W_]*\s?)           # If they had appeared earlier in the URL, comma and dot would have been included, but not right before the final space
           /x ) do
             m = Regexp.last_match
-            "<link href='#{ remove_markup(m[:target]) }'>#{m[:text]}</link>"
+            "<link href='#{ remove_markup(m[:target] + m[:last_included]) }'>#{m[:text]}</link>#{ remove_markup(m[:excluded]) }"
         end
       end
 
@@ -81,7 +83,7 @@ module Prawn
             indent = match.length-1
             indexes[indent] += 1
             # Resets indexes of all lower level when we increase one level
-            indexes.each_key { |k, v| indexes[k] = 0 if k > indent }
+            indexes.each_key { |k| indexes[k] = 0 if k > indent }
             # if one # starts the line, returns " 1. "
             # if two # start  the line, returns "    1. "
             Prawn::Text::NBSP +
