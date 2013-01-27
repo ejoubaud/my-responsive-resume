@@ -42,11 +42,8 @@
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  # Gets an integer age (in years) from a birth date
-  def age birth_date
-    now = Date.today
-    now.year - birth_date.year - ((birth_date >> 12 * now.year) > now ? 1 : 0)
-  end
+  require 'resume_helpers'
+  include ResumeHelpers
 
   # Displays a string with javascript, so it can't be parsed by spam crawlers
   def obfuscate str
@@ -67,13 +64,14 @@ helpers do
   end
 
   # Generates the personal_data line
-  # joining location, age, mail (obfuscated) and phone number, if provided
+  # joining location, age, mail (obfuscated)
+  # and phone number (obfuscated), if provided
   def personal_data resume
     [ resume.location,
-      resume.birth && "#{ age resume.birth } years",
+      resume.birth && "Age&nbsp;#{ age resume.birth }",
       resume.email && obfuscated_mail_to(resume.email),
       resume.phone && obfuscate(to_nbsp(resume.phone)),
-      resume.do_not_generate_pdf || link_to("PDF version", "#{resume.title}.pdf")
+      resume.do_not_generate_pdf || link_to("PDF&nbsp;version", "#{resume.title}.pdf")
     ].select{ |e| e.is_a? String }.join ' - '
   end
 

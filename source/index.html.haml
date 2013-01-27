@@ -31,7 +31,7 @@
     %nav#nav-bar.nav-bar
       %ul
         = list_of(data.resume.sections) do |name, section|
-          %a{:href => "##{name}"}= section.title
+          %a{:href => "##{name}", :class => "nav-link"}= section.title
 
     .resume.clearfix
       - data.resume.sections.each do |name, section|
@@ -60,14 +60,14 @@
       window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')
     %script{:src => "js/plugins.js"}
     %script{:src => "js/main.js"}
+    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"}
 
-    -#
-      / Google Analytics: change UA-XXXXX-X to be your site's ID.
-      :javascript
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
+    
+    :javascript
+      var _gaq=[['_setAccount','UA-37895269-1'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
 
 
 

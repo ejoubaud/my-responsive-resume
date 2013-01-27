@@ -35,6 +35,9 @@ module Middleman
 
       require 'textile_to_inline_prawn'
       require 'rqrcode_png'
+      require 'resume_helpers'
+
+      include ResumeHelpers
 
       BOX_MARGIN = 36
       AVATAR_WIDTH  = 80
@@ -60,9 +63,8 @@ module Middleman
       AVATAR_BORDER_COL = SECTIONH_COL
       LINK_COL = SECTIONH_COL
 
-      HEADER_BG = "DFDDB2"
-      SECTION_BG = "F2F1DB"
-      IMG_BG = "FFFFCC"
+      HEADER_BG = "FFFEE7"
+      IMG_BG = "FFF6DA"
       
       PERSONAL_SEPARATOR = ' - '
 
@@ -146,14 +148,14 @@ module Middleman
         file_name && File.exists?(File.join(dir, file_name))
       end
 
-      # Extraxts a resume's personal data in an array to be past as formatted_text argument
+      # Extraxts a resume's personal data into an array to be past as formatted_text argument
       # Returns empty array if no personal data
       def formatted_personal_data resume
         options = { color: AUX_TEXT_COL, size: PERSONAL_SIZE }
 
         # Prepars data (obfuscation, enhancement)
         loc = resume.location
-        age = resume.birth && "#{ age resume.birth } years"
+        age = resume.birth && "Age #{ age resume.birth }"
         mail = resume.email && obfuscate_for_formatted(resume.email, HEADER_BG, size: PERSONAL_SIZE, color: LINK_COL)
         phone = resume.phone && obfuscate_for_formatted(resume.phone, HEADER_BG, options)
 
@@ -192,12 +194,6 @@ module Middleman
               { text: "l", size: 1, color: background_color } ]
           end.
           flatten
-      end
-
-      # Gets an integer age (in years) from a birth date
-      def age birth_date
-        now = Date.today
-        now.year - birth_date.year - ((birth_date >> 12 * now.year) > now ? 1 : 0)
       end
 
       # Displays a section in the PDF from its Yaml data
