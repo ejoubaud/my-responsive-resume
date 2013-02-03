@@ -1,3 +1,5 @@
+$LOAD_PATH << File.join(File.dirname(__FILE__), 'lib')
+
 ###
 # Compass
 ###
@@ -114,7 +116,7 @@ end
 require 'redcloth'
 
 # PDF generation extension
-require 'pdf_my_resume'
-activate :pdf_my_resume
+require 'my_resume_pdf_generator'
+activate :my_resume_pdf_generator
 
 
